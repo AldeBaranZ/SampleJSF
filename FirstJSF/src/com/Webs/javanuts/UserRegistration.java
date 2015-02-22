@@ -1,7 +1,5 @@
 package com.Webs.javanuts;
 
-import java.util.Date;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 @ManagedBean(name = "userRegistration")
@@ -11,7 +9,7 @@ public class UserRegistration {
 		private String firstName;
 		private String lastName;
 		private int age;
-		private Date dob;
+		
 		private String city;
 		private double salary;
 		public String getFirstName() {
@@ -32,12 +30,6 @@ public class UserRegistration {
 		public void setAge(int age) {
 			this.age = age;
 		}
-		public Date getDob() {
-			return dob;
-		}
-		public void setDob(Date dob) {
-			this.dob = dob;
-		}
 		public String getCity() {
 			return city;
 		}
@@ -56,7 +48,7 @@ public class UserRegistration {
 			System.out.println("Values:");
 			System.out.println("First name:"+getFirstName());
 			System.out.println("Last name:"+getLastName());
-			return null;
+			return "Success";
 		}
 		
 }
